@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+float areaRec(float base, float altura) {
+    return base * altura;
+}
+float areaCua(float lado) {
+    return lado * lado;
+}
+float areaTrian(float base, float altura) {
+    return (base * altura) / 2;
+}
+int main() {
+    int opcion;
+    float base, altura, lado, area;
+    printf("Calculadora de areas\n");
+    printf("1 - area de un rectangulo\n");
+    printf("2 - area de un cuadrado\n");
+    printf("3 - area de un triangulo\n");
+    printf("4 - Salir\n");
+    scanf("%d", &opcion);
+    switch (opcion) {
+        case 1:
+            printf("area de un rectangulo\n");
+            printf("Ingresa base y altura: ");
+            scanf("%f %f", &base, &altura);
+            area = areaRec(base, altura);
+            printf("El area del rectangulo es: %.2f\n", area);
+            break;
+        case 2:
+            printf("area de un cuadrado\n");
+            printf("Ingresa el lado: ");
+            scanf("%f", &lado);
+            area = areaCua(lado);
+            printf("El area del cuadrado es: %.2f\n", area);
+            break;
+        case 3:
+            printf("area de un triangulo\n");
+            printf("Ingresa base y altura: ");
+            scanf("%f %f", &base, &altura);
+            area = areaTrian(base, altura);
+            printf("El area del triangulo es: %.2f\n", area);
+            break;
+        case 4:
+            printf("Saliendo del programa...\n");
+            break;
+        default:
+            printf("Opci�n no valida.\n");
+            break;
+    }
+
+    return 0;
+}
