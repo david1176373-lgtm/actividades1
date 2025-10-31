@@ -1,0 +1,15 @@
+#include <stdio.h>
+int funcion1(int * A)
+{   printf("%d\n",*A);
+	*A=10;
+	printf("%d\n",*A);
+	return 0;
+}
+int main()
+{
+	int A=5;
+	printf ("impresion0%d\n",A);
+	funcion1 (&A);
+	printf("impresion2%d\n",A);
+	return 0;
+}
